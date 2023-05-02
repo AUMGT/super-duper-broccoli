@@ -1,0 +1,39 @@
+(setq inhibit-startup-message t) ;kill splash screen
+
+
+(tool-bar-mode -1) ;kill toolbar
+(scroll-bar-mode -1) ;kill scroll bar
+(menu-bar-mode -1) ;kill menu bar
+
+(add-hook 'prog-mode-hook 'display-line-numbers-mode) ;display line numbers
+
+(ido-mode 1) ;ido mode for M_x
+
+(require 'package) 
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t) ;add melpa repo
+
+(global-set-key (kbd "M-x") 'smex) ;smex mode for C_x
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") ;include custom themes
+
+(require 'package)
+(custom-set-variables
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
+ '(custom-enabled-themes '(tomorrow-night-paradise))
+ '(custom-safe-themes
+   '("c24a91b79aad5821d87fe0656ea29d176d9a1b395bbc04dd6d49a1c92361779b" "bddf21b7face8adffc42c32a8223c3cc83b5c1bbd4ce49a5743ce528ca4da2b6" default))
+ '(frame-brackground-mode 'dark)
+ '(ispell-dictionary nil)
+ '(package-archives
+   '(("gnu" . "https://elpa.gnu.org/packages/")
+     ("melpa" . "https://melpa.org/packages/")))
+ '(package-selected-packages '(ranger ## haskell-mode gruber-darker-theme smex)))
+(package-initialize)
+
+
+
+(custom-set-faces
+ '(default ((t (:family "Monoid Nerd Font" :foundry "PfEd" :slant normal :weight normal :height 158 :width semi-condensed)))))

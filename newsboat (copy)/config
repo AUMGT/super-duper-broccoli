@@ -1,0 +1,21 @@
+auto-reload yes
+
+bind-key n down
+bind-key p up
+bind-key n next articlelist
+bind-key p prev articlelist
+bind-key N next-feed articlelist
+bind-key P prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key v pagedown
+bind-key V pageup
+bind-key q quit
+bind-key a toggle-article-read
+bind-key f next-unread
+bind-key b prev-unread
+bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+
+browser "firefox %u"
